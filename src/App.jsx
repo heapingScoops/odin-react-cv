@@ -57,16 +57,22 @@ function App() {
 
   return (
     <>
-      <ContactInfoForm contact={contactInfo} handleChange={handleContactChange} />
-      <WorkExperienceFormList workExperiences={workExperiences} addExperience={handleAddExperience} handleChange={handleChangeWork} />
-      <EducationFormList experiences={educationExperiences} addExperience={handleAddEducation} handleChange={handleEducationChange} />
+      <div id="app-container">
 
-      <div id="cv-output">
+        <div id="cv-input">
 
-        <ContactInfo contact={contactInfo} />
-        <WorkExperienceList workExperiences={workExperiences} />
-        <EducationList educationExperiences={educationExperiences} />
+          <ContactInfoForm contact={contactInfo} handleChange={handleContactChange} />
+          <WorkExperienceFormList workExperiences={workExperiences} addExperience={handleAddExperience} handleChange={handleChangeWork} />
+          <EducationFormList experiences={educationExperiences} addExperience={handleAddEducation} handleChange={handleEducationChange} />
 
+        </div>
+        <div id="cv-output">
+
+          <ContactInfo contact={contactInfo} />
+          <WorkExperienceList workExperiences={workExperiences} />
+          <EducationList educationExperiences={educationExperiences} />
+
+        </div>
       </div>
     </>
   )
